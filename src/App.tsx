@@ -1,10 +1,11 @@
 
-import React from 'react';
-import { BrowserRouter } from 'react-router-dom'
-import { AppRoutes } from './routes/index';
-import { MenuLateral } from './shared/components';
-import { DrawerProvider } from './shared/contexts';
+
+
 import { AppThemeProvider } from './shared/contexts/ThemeContext';
+import { DrawerProvider } from './shared/contexts';
+import { BrowserRouter } from 'react-router-dom'
+import { MenuLateral } from './shared/components';
+import { AppRoutes } from './routes/index';
 
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
           </MenuLateral> 
 
         </BrowserRouter>
-        
+
       </DrawerProvider>
     </AppThemeProvider>
   );
