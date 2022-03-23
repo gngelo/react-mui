@@ -1,13 +1,20 @@
-import { 
-  Avatar, Divider, 
-  Drawer, Icon, List, 
-  ListItemButton, ListItemIcon, 
-  ListItemText, useMediaQuery, 
-  useTheme } from "@mui/material"
-import { Box } from "@mui/system"
-import { useMatch, useNavigate, useResolvedPath } from "react-router-dom";
-import { useDrawerContext } from './../../contexts/DrawerContext';
+import {
+  Avatar,
+  Divider,
+  Drawer,
+  Icon,
+  List,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+  useMediaQuery,
+  useTheme,
+} from '@mui/material';
+import { Box } from '@mui/system';
+import { useMatch, useNavigate, useResolvedPath } from 'react-router-dom';
+
 import { useAppThemeContext } from '../../contexts/ThemeContext';
+import { useDrawerContext } from './../../contexts/DrawerContext';
 
 interface IListItemLinkProps {
   to: string;

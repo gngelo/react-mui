@@ -1,23 +1,21 @@
+import { Box, Button, Icon, Paper, TextField, useTheme } from '@mui/material';
 
 
-
-import { Box, Button, Icon, Paper, TextField, useTheme } from '@mui/material'
-
-interface IBarraDeFerramentasProps {
+interface IFerramentasDaListagemProps {
   textoDaBusca?: string
-  mostrarInputBusca?: boolean
-  aoMudarTextoBusca?: (novoTexto: string)=>void
   textoBotaoNovo?: string
+  mostrarInputBusca?: boolean
   mostrarBotaoNovo?: boolean
+  aoMudarTextoBusca?: (novoTexto: string)=>void
   aoClicarEmNovo?:()=>void
 }
 
-export const BarraDeFerramenta: React.FC<IBarraDeFerramentasProps> = ({
+export const FerramentasDaListagem: React.FC<IFerramentasDaListagemProps> = ({
   textoDaBusca='',
-  mostrarInputBusca=false,
-  aoMudarTextoBusca,  
   textoBotaoNovo='Novo',
+  mostrarInputBusca=false,
   mostrarBotaoNovo=true,
+  aoMudarTextoBusca,  
   aoClicarEmNovo
 }) => {
 
@@ -25,14 +23,14 @@ export const BarraDeFerramenta: React.FC<IBarraDeFerramentasProps> = ({
 
   return ( 
     <Box 
-    gap={1}
-    marginX={1}
-    padding={1}
-    paddingX={2}
-    display={'flex'}
-    alignItems={'center'}    
-    height={theme.spacing(5)}
-    component={Paper} 
+      gap={1}
+      marginX={1}
+      padding={1}
+      paddingX={2}
+      display={'flex'}
+      alignItems={'center'}    
+      height={theme.spacing(5)}
+      component={Paper} 
     >
       {
         mostrarInputBusca && (
